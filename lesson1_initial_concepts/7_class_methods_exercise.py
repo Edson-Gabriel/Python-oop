@@ -5,7 +5,7 @@ class Store:
         self.value_product_gross = value
         
     def calculate_product(self):
-        prize_product = self.value_product_gross + ((self.rate*self.value_product_gross)/100) if self.rate > 0 else self.value_product_gross
+        prize_product = self.value_product_gross + ((self.rate*self.value_product_gross)/100) if self.rate >= 0 else self.value_product_gross
         print(f"R${prize_product:.2f}")
     
     @classmethod        
